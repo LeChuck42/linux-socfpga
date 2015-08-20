@@ -34,4 +34,13 @@ config SPI_CADENCE_QUADSPI
 	help
 	  This enables support for the Cadence Quad SPI controller and NOR flash.
 
+
+config SPI_ALTERA_QUADSPI
+	tristate "Altera Generic Quad SPI Controller"
+	depends on OF
+	help
+	  This enables access to Altera EPCQ/EPCS flash chips,
+	  used for data storage. See the driver source for the current list,
+	  or to add other chips.
+
 endif # MTD_SPI_NOR
