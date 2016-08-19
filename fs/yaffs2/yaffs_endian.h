@@ -29,6 +29,10 @@ static inline u32 swap_u32(u32 val)
 #define swap_s32(val) \
 	(s32)(swap_u32((u32)(val)))
 
+#ifndef Y_LOFF_T
+#define Y_LOFF_T loff_t
+#endif
+
 static inline Y_LOFF_T swap_loff_t(Y_LOFF_T lval)
 {
 	u32 vall = swap_u32((u32) (lval & 0xffffffff));
